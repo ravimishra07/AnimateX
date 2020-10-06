@@ -13,6 +13,7 @@
 		3CFF34AD252C189600C5B086 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFF34AB252C189600C5B086 /* Main.storyboard */; };
 		3CFF34AF252C189700C5B086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CFF34AE252C189700C5B086 /* Assets.xcassets */; };
 		3CFF34B2252C189700C5B086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFF34B0252C189700C5B086 /* LaunchScreen.storyboard */; };
+		3CFF34BD252C279600C5B086 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFF34BC252C279600C5B086 /* Pulsing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3CFF34AE252C189700C5B086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CFF34B1252C189700C5B086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CFF34B3252C189700C5B086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CFF34BC252C279600C5B086 /* Pulsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pulsing.swift; path = "../../../../Downloads/CoolCoreAnimations-master/CoreAnimation/Pulsing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				3CFF34A5252C189600C5B086 /* AppDelegate.swift */,
 				3CFF34A7252C189600C5B086 /* SceneDelegate.swift */,
+				3CFF34BC252C279600C5B086 /* Pulsing.swift */,
 				3CFF34A9252C189600C5B086 /* ViewController.swift */,
 				3CFF34AB252C189600C5B086 /* Main.storyboard */,
 				3CFF34AE252C189700C5B086 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			files = (
 				3CFF34AA252C189600C5B086 /* ViewController.swift in Sources */,
 				3CFF34A6252C189600C5B086 /* AppDelegate.swift in Sources */,
+				3CFF34BD252C279600C5B086 /* Pulsing.swift in Sources */,
 				3CFF34A8252C189600C5B086 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
