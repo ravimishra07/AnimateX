@@ -13,7 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func pulseTapped(_ sender: UIButton){
+        let vc = self.storyboard?.instantiateViewController(identifier: "SpringVC") as! SpringVC
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
 
 }
 

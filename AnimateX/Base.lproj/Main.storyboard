@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,6 +34,9 @@
                                                         <state key="normal" title="Spring">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pulseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5R0-8D-xdV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnT-BX-VpZ">
                                                         <rect key="frame" x="0.0" y="140.5" width="159.5" height="128.5"/>
@@ -93,6 +97,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="76"/>
+        </scene>
+        <!--SpringVC-->
+        <scene sceneID="u2Y-He-q8i">
+            <objects>
+                <viewController storyboardIdentifier="SpringVC" id="xey-qr-5y0" customClass="SpringVC" customModule="AnimateX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qLC-Tz-Z9D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzW-Lo-mZR">
+                                <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X51-5X-7fl">
+                                        <rect key="frame" x="30" y="30" width="60" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="0L1-6g-5Wu"/>
+                                            <constraint firstAttribute="width" constant="60" id="PTs-Tj-Ju0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="C0K-Je-gw1"/>
+                                    <constraint firstAttribute="width" constant="120" id="H4c-dQ-6hJ"/>
+                                    <constraint firstItem="X51-5X-7fl" firstAttribute="centerY" secondItem="MzW-Lo-mZR" secondAttribute="centerY" id="Sr9-BW-xek"/>
+                                    <constraint firstItem="X51-5X-7fl" firstAttribute="centerX" secondItem="MzW-Lo-mZR" secondAttribute="centerX" id="ZCC-ax-bEM"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-6U-C8K">
+                                <rect key="frame" x="4" y="802" width="406" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ix4-ss-eif"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="22X-tR-IBg">
+                                    <size key="itemSize" width="156" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FRh-tb-T2O">
+                                        <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zks-9U-d0T">
+                                            <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="156" height="50"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O5y-xS-yoe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O5y-xS-yoe" firstAttribute="bottom" secondItem="mdf-6U-C8K" secondAttribute="bottom" id="3cU-vT-WaQ"/>
+                            <constraint firstItem="O5y-xS-yoe" firstAttribute="trailing" secondItem="mdf-6U-C8K" secondAttribute="trailing" constant="4" id="C67-WI-Ocy"/>
+                            <constraint firstItem="mdf-6U-C8K" firstAttribute="leading" secondItem="O5y-xS-yoe" secondAttribute="leading" constant="4" id="bW1-A2-N37"/>
+                            <constraint firstItem="MzW-Lo-mZR" firstAttribute="centerY" secondItem="qLC-Tz-Z9D" secondAttribute="centerY" id="g9e-ue-aXJ"/>
+                            <constraint firstItem="MzW-Lo-mZR" firstAttribute="centerX" secondItem="qLC-Tz-Z9D" secondAttribute="centerX" id="oJr-Rl-Alg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainView" destination="MzW-Lo-mZR" id="194-tS-1ng"/>
+                        <outlet property="subView" destination="X51-5X-7fl" id="ERp-cA-h0i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z70-uR-7Mk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="731.8840579710145" y="75"/>
         </scene>
     </scenes>
     <resources>
