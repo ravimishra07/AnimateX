@@ -16,11 +16,14 @@ class SpringVC: UIViewController {
     
     //MARK:- Variables
     var  isVertical = false
+    var collectionViewDataSource = ["Animation 1","Animation 2","Animation 3","Animation 4"]
     
     //MARK:- View controllers delegate function
     override func viewDidLoad() {
         super.viewDidLoad()
         subView.isHidden = true
+        menuCollectionView.dataSource  = self
+        menuCollectionView.delegate = self
         animateSpring()
         // Do any additional setup after loading the view.
     }
@@ -51,4 +54,23 @@ class SpringVC: UIViewController {
             self.animateSpring()
         }
     }
+}
+extension SpringVC: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        collectionViewDataSource.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as! MenuCell
+        cell.titleLabel.text = collectionViewDataSource[indexPath.row]
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150, height: 60)
+
+    }
+    
 }
