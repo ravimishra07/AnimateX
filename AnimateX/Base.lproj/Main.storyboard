@@ -107,10 +107,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzW-Lo-mZR">
-                                <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                <rect key="frame" x="167" y="408" width="80" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X51-5X-7fl">
-                                        <rect key="frame" x="30" y="30" width="60" height="60"/>
+                                        <rect key="frame" x="10" y="10" width="60" height="60"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="0L1-6g-5Wu"/>
@@ -120,8 +120,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="C0K-Je-gw1"/>
-                                    <constraint firstAttribute="width" constant="120" id="H4c-dQ-6hJ"/>
+                                    <constraint firstAttribute="height" constant="80" id="C0K-Je-gw1"/>
+                                    <constraint firstAttribute="width" constant="80" id="H4c-dQ-6hJ"/>
                                     <constraint firstItem="X51-5X-7fl" firstAttribute="centerY" secondItem="MzW-Lo-mZR" secondAttribute="centerY" id="Sr9-BW-xek"/>
                                     <constraint firstItem="X51-5X-7fl" firstAttribute="centerX" secondItem="MzW-Lo-mZR" secondAttribute="centerX" id="ZCC-ax-bEM"/>
                                 </constraints>
