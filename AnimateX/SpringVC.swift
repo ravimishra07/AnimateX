@@ -57,9 +57,19 @@ class SpringVC: UIViewController {
         }
         view.removeFromSuperview()
     }
-//    private vertical3DRotation(view:View){
-//
-//    }
+    private func  vertical3DRotation(view: UIView){
+        UIView.animate(withDuration: 0.5) {
+            view.transform = view.transform.rotated(by: .pi / 2)
+            view.backgroundColor = .red
+            var rotation = CATransform3DMakeRotation(.pi, 1.0, 0.0, 0.0);
+            rotation.m34 = CGFloat(-1.0/500.0)
+            view.layer.transform = rotation
+        } completion: { (finished) -> Void in
+            self.vertical3DRotation(view: view)
+        }
+
+
+    }
     private func animate1(){
         if animationType == AnimationType.kType1{
             guard let mainV =  self.view.viewWithTag(VIEW_TAG) else{
