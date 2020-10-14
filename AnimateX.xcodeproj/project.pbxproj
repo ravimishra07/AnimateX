@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C6310932536A483005B712D /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6310922536A483005B712D /* TransitionViewController.swift */; };
+		3C6310962536A59F005B712D /* TranstionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6310952536A59F005B712D /* TranstionCell.swift */; };
 		3CCA2700252D76B100853FA2 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA26FF252D76B100853FA2 /* MenuCell.swift */; };
-		3CF2EA9B252CE50A00A853CC /* SpringVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2EA9A252CE50A00A853CC /* SpringVC.swift */; };
+		3CF2EA9B252CE50A00A853CC /* LoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2EA9A252CE50A00A853CC /* LoaderVC.swift */; };
 		3CFF34A6252C189600C5B086 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFF34A5252C189600C5B086 /* AppDelegate.swift */; };
 		3CFF34A8252C189600C5B086 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFF34A7252C189600C5B086 /* SceneDelegate.swift */; };
 		3CFF34AA252C189600C5B086 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFF34A9252C189600C5B086 /* ViewController.swift */; };
@@ -19,8 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C6310922536A483005B712D /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
+		3C6310952536A59F005B712D /* TranstionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranstionCell.swift; sourceTree = "<group>"; };
 		3CCA26FF252D76B100853FA2 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
-		3CF2EA9A252CE50A00A853CC /* SpringVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringVC.swift; sourceTree = "<group>"; };
+		3CF2EA9A252CE50A00A853CC /* LoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderVC.swift; sourceTree = "<group>"; };
 		3CFF34A2252C189600C5B086 /* AnimateX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimateX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CFF34A5252C189600C5B086 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CFF34A7252C189600C5B086 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,12 +70,14 @@
 				3CFF34A7252C189600C5B086 /* SceneDelegate.swift */,
 				3CFF34BC252C279600C5B086 /* Pulsing.swift */,
 				3CFF34A9252C189600C5B086 /* ViewController.swift */,
+				3C6310922536A483005B712D /* TransitionViewController.swift */,
 				3CFF34AB252C189600C5B086 /* Main.storyboard */,
 				3CFF34AE252C189700C5B086 /* Assets.xcassets */,
 				3CFF34B0252C189700C5B086 /* LaunchScreen.storyboard */,
 				3CFF34B3252C189700C5B086 /* Info.plist */,
-				3CF2EA9A252CE50A00A853CC /* SpringVC.swift */,
+				3CF2EA9A252CE50A00A853CC /* LoaderVC.swift */,
 				3CCA26FF252D76B100853FA2 /* MenuCell.swift */,
+				3C6310952536A59F005B712D /* TranstionCell.swift */,
 			);
 			path = AnimateX;
 			sourceTree = "<group>";
@@ -146,11 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6310962536A59F005B712D /* TranstionCell.swift in Sources */,
 				3CFF34AA252C189600C5B086 /* ViewController.swift in Sources */,
 				3CFF34A6252C189600C5B086 /* AppDelegate.swift in Sources */,
 				3CCA2700252D76B100853FA2 /* MenuCell.swift in Sources */,
 				3CFF34BD252C279600C5B086 /* Pulsing.swift in Sources */,
-				3CF2EA9B252CE50A00A853CC /* SpringVC.swift in Sources */,
+				3CF2EA9B252CE50A00A853CC /* LoaderVC.swift in Sources */,
+				3C6310932536A483005B712D /* TransitionViewController.swift in Sources */,
 				3CFF34A8252C189600C5B086 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

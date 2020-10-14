@@ -31,11 +31,11 @@
                                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
                                                         <color key="tintColor" red="0.37647058820000001" green="0.28627450980000002" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Spring">
+                                                        <state key="normal" title="Loaders">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="pulseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5R0-8D-xdV"/>
+                                                            <action selector="loadersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7uj-nb-RhH"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnT-BX-VpZ">
@@ -57,9 +57,12 @@
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
                                                         <color key="tintColor" red="0.37647058820000001" green="0.28627450980000002" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Button">
+                                                        <state key="normal" title="Transition">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="transitionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nw-re-9rJ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiW-8P-T63">
                                                         <rect key="frame" x="0.0" y="140.5" width="159.5" height="128.5"/>
@@ -93,15 +96,21 @@
                             <constraint firstItem="Piy-S4-ghO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="nlu-Nv-EHi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btn3" destination="pnT-BX-VpZ" id="z5f-sP-wmg"/>
+                        <outlet property="btn4" destination="wiW-8P-T63" id="QaB-E5-Be5"/>
+                        <outlet property="loaderBtn" destination="sXz-bA-Bvb" id="zUk-sb-Q21"/>
+                        <outlet property="transtionBtn" destination="gTc-hV-KBL" id="Wbo-nr-UdI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="76"/>
         </scene>
-        <!--SpringVC-->
+        <!--LoaderVC-->
         <scene sceneID="u2Y-He-q8i">
             <objects>
-                <viewController storyboardIdentifier="SpringVC" id="xey-qr-5y0" customClass="SpringVC" customModule="AnimateX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoaderVC" id="xey-qr-5y0" customClass="LoaderVC" customModule="AnimateX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qLC-Tz-Z9D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,6 +195,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z70-uR-7Mk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="731.8840579710145" y="75"/>
+        </scene>
+        <!--Transition View Controller-->
+        <scene sceneID="Rfm-zL-K7C">
+            <objects>
+                <viewController storyboardIdentifier="TransitionViewController" id="9Zb-Ld-ftI" customClass="TransitionViewController" customModule="AnimateX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="utO-tA-UgB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vVV-0H-EnM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TranstionCell" rowHeight="77" id="LFN-hf-IN9" customClass="TranstionCell" customModule="AnimateX" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LFN-hf-IN9" id="mmR-VO-hPr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnK-5s-XHI">
+                                                    <rect key="frame" x="175" y="24.5" width="64.5" height="28"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pnK-5s-XHI" firstAttribute="centerX" secondItem="mmR-VO-hPr" secondAttribute="centerX" id="h8y-1h-mvj"/>
+                                                <constraint firstItem="pnK-5s-XHI" firstAttribute="centerY" secondItem="mmR-VO-hPr" secondAttribute="centerY" id="myo-Kf-bay"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLbl" destination="pnK-5s-XHI" id="5UD-ZB-v9w"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bDZ-3G-fjp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bDZ-3G-fjp" firstAttribute="bottom" secondItem="vVV-0H-EnM" secondAttribute="bottom" id="HwZ-Yb-26c"/>
+                            <constraint firstItem="vVV-0H-EnM" firstAttribute="trailing" secondItem="bDZ-3G-fjp" secondAttribute="trailing" id="NrS-3p-ft9"/>
+                            <constraint firstItem="vVV-0H-EnM" firstAttribute="top" secondItem="bDZ-3G-fjp" secondAttribute="top" id="m8y-S0-BYy"/>
+                            <constraint firstItem="vVV-0H-EnM" firstAttribute="leading" secondItem="bDZ-3G-fjp" secondAttribute="leading" id="pdS-PQ-oXn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="vVV-0H-EnM" id="7VE-kf-bQn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSw-Ef-eWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466.6666666666667" y="71.651785714285708"/>
         </scene>
     </scenes>
     <resources>

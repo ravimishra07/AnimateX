@@ -11,7 +11,7 @@ enum AnimationType{
     case kType2
 
 }
-class SpringVC: UIViewController {
+class LoaderVC: UIViewController {
     
     //MARK:- Outlets
     @IBOutlet weak var mainView: UIView!
@@ -128,7 +128,7 @@ class SpringVC: UIViewController {
         }
     }
 }
-extension SpringVC: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension LoaderVC: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         collectionViewDataSource.count
     }
