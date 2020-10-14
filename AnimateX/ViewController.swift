@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     @IBAction func transitionTapped(_ sender: UIButton){
         let vc = self.storyboard?.instantiateViewController(identifier: "TransitionViewController") as! TransitionViewController
         //vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: true, completion: nil)
+        self.present(vc, animated: false, completion: nil)
     }
 
 }

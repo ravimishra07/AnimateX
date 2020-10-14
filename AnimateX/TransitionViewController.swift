@@ -17,6 +17,15 @@ class TransitionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.transform = CGAffineTransform(translationX: 0, y: self.view.frame.height)
+        UIView.animateKeyframes(withDuration: 0.8, delay: 0, options: []) {
+            self.view.transform = .identity
+        } completion: { (isComplete) in
+            
+        }
+
+    }
 }
 extension TransitionViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,10 +33,12 @@ extension TransitionViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "") as? TranstionCell else{return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TranstionCell") as? TranstionCell else{return UITableViewCell()}
         cell.titleLbl.text = dataSource[indexPath.row]
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        90
+    }
     
 }
