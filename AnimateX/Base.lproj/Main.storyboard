@@ -233,17 +233,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGw-RR-Z2J">
+                                <rect key="frame" x="12" y="50" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Fic-ZY-dkh"/>
+                                    <constraint firstAttribute="width" constant="40" id="ZEK-58-j5y"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="cross-mark"/>
+                                <connections>
+                                    <action selector="dismisstapped:" destination="9Zb-Ld-ftI" eventType="touchUpInside" id="vXF-ot-oFf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bDZ-3G-fjp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bDZ-3G-fjp" firstAttribute="bottom" secondItem="vVV-0H-EnM" secondAttribute="bottom" id="HwZ-Yb-26c"/>
+                            <constraint firstItem="QGw-RR-Z2J" firstAttribute="top" secondItem="bDZ-3G-fjp" secondAttribute="top" constant="6" id="Jvt-KH-Aug"/>
                             <constraint firstItem="vVV-0H-EnM" firstAttribute="trailing" secondItem="bDZ-3G-fjp" secondAttribute="trailing" id="NrS-3p-ft9"/>
                             <constraint firstItem="vVV-0H-EnM" firstAttribute="top" secondItem="bDZ-3G-fjp" secondAttribute="top" id="m8y-S0-BYy"/>
+                            <constraint firstItem="QGw-RR-Z2J" firstAttribute="leading" secondItem="bDZ-3G-fjp" secondAttribute="leading" constant="12" id="mum-ZX-UIj"/>
                             <constraint firstItem="vVV-0H-EnM" firstAttribute="leading" secondItem="bDZ-3G-fjp" secondAttribute="leading" id="pdS-PQ-oXn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dismissBtn" destination="QGw-RR-Z2J" id="HLG-Y1-Cvq"/>
                         <outlet property="tableView" destination="vVV-0H-EnM" id="7VE-kf-bQn"/>
                     </connections>
                 </viewController>
@@ -253,6 +268,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cross-mark" width="512" height="512"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
