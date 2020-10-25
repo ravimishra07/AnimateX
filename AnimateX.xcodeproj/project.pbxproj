@@ -17,7 +17,6 @@
 		3CFF34AD252C189600C5B086 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFF34AB252C189600C5B086 /* Main.storyboard */; };
 		3CFF34AF252C189700C5B086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CFF34AE252C189700C5B086 /* Assets.xcassets */; };
 		3CFF34B2252C189700C5B086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFF34B0252C189700C5B086 /* LaunchScreen.storyboard */; };
-		3CFF34BD252C279600C5B086 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFF34BC252C279600C5B086 /* Pulsing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		3CFF34AE252C189700C5B086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CFF34B1252C189700C5B086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CFF34B3252C189700C5B086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CFF34BC252C279600C5B086 /* Pulsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pulsing.swift; path = "../../../../Downloads/CoolCoreAnimations-master/CoreAnimation/Pulsing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +45,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C99A6EC2545818D0018160F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3CFF34A5252C189600C5B086 /* AppDelegate.swift */,
+				3CFF34A7252C189600C5B086 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3C99A6ED254581950018160F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3CFF34A9252C189600C5B086 /* ViewController.swift */,
+				3C6310922536A483005B712D /* TransitionViewController.swift */,
+				3CF2EA9A252CE50A00A853CC /* LoaderVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3C99A6EE2545819E0018160F /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3CFF34B0252C189700C5B086 /* LaunchScreen.storyboard */,
+				3CFF34AB252C189600C5B086 /* Main.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		3C99A6EF254581AA0018160F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3C99A6F0254581C60018160F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3CCA26FF252D76B100853FA2 /* MenuCell.swift */,
+				3C6310952536A59F005B712D /* TranstionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3C99A6F1254581E40018160F /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		3CFF3499252C189600C5B086 = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +115,14 @@
 		3CFF34A4252C189600C5B086 /* AnimateX */ = {
 			isa = PBXGroup;
 			children = (
-				3CFF34A5252C189600C5B086 /* AppDelegate.swift */,
-				3CFF34A7252C189600C5B086 /* SceneDelegate.swift */,
-				3CFF34BC252C279600C5B086 /* Pulsing.swift */,
-				3CFF34A9252C189600C5B086 /* ViewController.swift */,
-				3C6310922536A483005B712D /* TransitionViewController.swift */,
-				3CFF34AB252C189600C5B086 /* Main.storyboard */,
+				3C99A6F1254581E40018160F /* Animations */,
+				3C99A6F0254581C60018160F /* Cell */,
+				3C99A6EF254581AA0018160F /* Utils */,
+				3C99A6EE2545819E0018160F /* storyboard */,
+				3C99A6ED254581950018160F /* Controller */,
+				3C99A6EC2545818D0018160F /* Core */,
 				3CFF34AE252C189700C5B086 /* Assets.xcassets */,
-				3CFF34B0252C189700C5B086 /* LaunchScreen.storyboard */,
 				3CFF34B3252C189700C5B086 /* Info.plist */,
-				3CF2EA9A252CE50A00A853CC /* LoaderVC.swift */,
-				3CCA26FF252D76B100853FA2 /* MenuCell.swift */,
-				3C6310952536A59F005B712D /* TranstionCell.swift */,
 			);
 			path = AnimateX;
 			sourceTree = "<group>";
@@ -156,7 +201,6 @@
 				3CFF34AA252C189600C5B086 /* ViewController.swift in Sources */,
 				3CFF34A6252C189600C5B086 /* AppDelegate.swift in Sources */,
 				3CCA2700252D76B100853FA2 /* MenuCell.swift in Sources */,
-				3CFF34BD252C279600C5B086 /* Pulsing.swift in Sources */,
 				3CF2EA9B252CE50A00A853CC /* LoaderVC.swift in Sources */,
 				3C6310932536A483005B712D /* TransitionViewController.swift in Sources */,
 				3CFF34A8252C189600C5B086 /* SceneDelegate.swift in Sources */,
