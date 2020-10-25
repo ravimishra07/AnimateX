@@ -43,9 +43,12 @@
                                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
                                                         <color key="tintColor" red="0.37647058820000001" green="0.28627450980000002" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Button">
+                                                        <state key="normal" title="Navigation">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="navigationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zka-Vm-dUu"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -266,9 +269,103 @@
             </objects>
             <point key="canvasLocation" x="1466.6666666666667" y="71.651785714285708"/>
         </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="EaU-z0-4Oz">
+            <objects>
+                <viewController storyboardIdentifier="NavigationViewController" id="mPu-aV-lKG" customClass="NavigationViewController" customModule="AnimateX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RMF-kK-DZQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCy-WT-vWq">
+                                <rect key="frame" x="177" y="802" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="JgL-fN-Fsf"/>
+                                    <constraint firstAttribute="width" constant="60" id="ppl-3Y-WYv"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="cross-mark"/>
+                                <connections>
+                                    <action selector="crossTapped:" destination="mPu-aV-lKG" eventType="touchUpInside" id="VBY-jF-yqI"/>
+                                    <action selector="dismisstapped:" destination="9Zb-Ld-ftI" eventType="touchUpInside" id="hSW-cd-CDm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXY-dC-g1E">
+                                <rect key="frame" x="95" y="812.5" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="68i-AT-nas"/>
+                                    <constraint firstAttribute="height" constant="50" id="Dc9-2y-Y52"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" backgroundImage="bolt.horizontal.circle" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abc-FN-2RP">
+                                <rect key="frame" x="269" y="813" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Q97-4K-zT9"/>
+                                    <constraint firstAttribute="width" constant="50" id="b79-KK-WYn"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" backgroundImage="timer" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJU-Fu-AkI">
+                                <rect key="frame" x="335" y="822.5" width="40" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="L4W-8s-iIl"/>
+                                    <constraint firstAttribute="height" constant="40" id="kCk-Ro-fG6"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" backgroundImage="paperplane.circle" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD6-5G-qQ4">
+                                <rect key="frame" x="39" y="823" width="40" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="5xi-pX-iSJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="A66-sH-2r3"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" backgroundImage="arrowshape.turn.up.forward" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AWl-a8-M7f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iJU-Fu-AkI" firstAttribute="leading" secondItem="abc-FN-2RP" secondAttribute="trailing" constant="16" id="0O1-ST-y5d"/>
+                            <constraint firstItem="GCy-WT-vWq" firstAttribute="leading" secondItem="qXY-dC-g1E" secondAttribute="trailing" constant="32" id="BL0-hX-ndH"/>
+                            <constraint firstItem="AWl-a8-M7f" firstAttribute="bottom" secondItem="MD6-5G-qQ4" secondAttribute="bottom" id="MtA-Os-Zcq"/>
+                            <constraint firstItem="AWl-a8-M7f" firstAttribute="bottom" secondItem="iJU-Fu-AkI" secondAttribute="bottom" id="VcD-9Y-O8P"/>
+                            <constraint firstItem="AWl-a8-M7f" firstAttribute="bottom" secondItem="abc-FN-2RP" secondAttribute="bottom" id="VmC-lK-UOK"/>
+                            <constraint firstItem="GCy-WT-vWq" firstAttribute="centerX" secondItem="RMF-kK-DZQ" secondAttribute="centerX" id="WMB-r0-UTZ"/>
+                            <constraint firstItem="qXY-dC-g1E" firstAttribute="leading" secondItem="MD6-5G-qQ4" secondAttribute="trailing" constant="16" id="hXW-VO-a58"/>
+                            <constraint firstItem="abc-FN-2RP" firstAttribute="leading" secondItem="GCy-WT-vWq" secondAttribute="trailing" constant="32" id="nzx-xD-80g"/>
+                            <constraint firstItem="AWl-a8-M7f" firstAttribute="bottom" secondItem="qXY-dC-g1E" secondAttribute="bottom" id="qSY-x3-dgL"/>
+                            <constraint firstItem="AWl-a8-M7f" firstAttribute="bottom" secondItem="GCy-WT-vWq" secondAttribute="bottom" id="vqd-OH-dzD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="menuBtn1" destination="MD6-5G-qQ4" id="J2F-8u-rRR"/>
+                        <outlet property="menuBtn1BottomContraint" destination="MtA-Os-Zcq" id="YJV-Nv-Qep"/>
+                        <outlet property="menuBtn2" destination="qXY-dC-g1E" id="i6x-Sy-MTK"/>
+                        <outlet property="menuBtn2BottomContraint" destination="qSY-x3-dgL" id="vYm-kG-p2f"/>
+                        <outlet property="menuBtn3" destination="GCy-WT-vWq" id="3Nv-SI-EnZ"/>
+                        <outlet property="menuBtn3BottomContraint" destination="vqd-OH-dzD" id="t0V-fT-CIb"/>
+                        <outlet property="menuBtn4" destination="abc-FN-2RP" id="34W-Lw-PcC"/>
+                        <outlet property="menuBtn4BottomContraint" destination="VmC-lK-UOK" id="Kzf-W8-2bP"/>
+                        <outlet property="menuBtn5" destination="iJU-Fu-AkI" id="OKx-ME-fm3"/>
+                        <outlet property="menuBtn5BottomContraint" destination="VcD-9Y-O8P" id="RtX-AO-wrU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tBm-hk-hOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2173" y="77"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
+        <image name="bolt.horizontal.circle" catalog="system" width="128" height="121"/>
         <image name="cross-mark" width="512" height="512"/>
+        <image name="paperplane.circle" catalog="system" width="128" height="121"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

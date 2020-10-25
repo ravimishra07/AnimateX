@@ -37,5 +37,9 @@ class ViewController: UIViewController {
         self.present(vc, animated: false, completion: nil)
     }
 
+    @IBAction func navigationTapped(_ sender: UIButton){
+        let vc = self.storyboard?.instantiateViewController(identifier: "NavigationViewController") as! NavigationViewController
+        self.present(vc, animated: false, completion: nil)
+    }
 }
 

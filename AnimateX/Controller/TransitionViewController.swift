@@ -36,13 +36,13 @@ class TransitionViewController: UIViewController {
         status = !status
 
         if status{
-            UIView.animate(withDuration: 0.50, animations: {
+            UIView.animate(withDuration: 0.50, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.4, options: [], animations: {
                 self.dismissBtn.transform = CGAffineTransform(rotationAngle: -(.pi/4)*3 )
                 self.tableView.transform = CGAffineTransform(translationX:0,y: self.view.bounds.height)
             }, completion: nil)
             
         }else{
-            UIView.animate(withDuration: 0.50, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
+            UIView.animate(withDuration: 0.50, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.4, options: [], animations: {
                 self.dismissBtn.transform = .identity
                 self.tableView.transform = .identity
 
@@ -72,17 +72,10 @@ extension TransitionViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cellTranstaion = (self.view.bounds.height - cell.contentView.bounds.height*CGFloat((indexPath.row+1))) + 100
         cell.transform = CGAffineTransform(translationX: 0, y: self.cellTranstaion)
-//        UIView.animate(withDuration: 0.50, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
-//            self.dismissBtn.transform = .identity
-//            self.tableView.transform = .identity
-//
-//        }, completion: nil)
-        UIView.animate(withDuration: 0.8) {
-            cell.transform = .identity//CGAffineTransform(translationX: 0, y: self.cellTranstaion)
+        UIView.animate(withDuration: 0.50, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.6, options: [], animations: {
+            cell.transform = .identity
 
-        } completion: { (isTrue) in
-
-        }
+        }, completion: nil)
 
     }
 }
