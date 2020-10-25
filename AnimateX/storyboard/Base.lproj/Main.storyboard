@@ -334,10 +334,6 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" backgroundImage="cursorarrow.motionlines.click" catalog="system"/>
-                                <connections>
-                                    <action selector="crossTapped:" destination="mPu-aV-lKG" eventType="touchUpInside" id="c35-oy-lgz"/>
-                                    <action selector="dismisstapped:" destination="9Zb-Ld-ftI" eventType="touchUpInside" id="IoL-Xd-Nij"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2y-AX-22H">
                                 <rect key="frame" x="340" y="720.5" width="30" height="30"/>
@@ -347,10 +343,6 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" backgroundImage="highlighter" catalog="system"/>
-                                <connections>
-                                    <action selector="crossTapped:" destination="mPu-aV-lKG" eventType="touchUpInside" id="FQB-X1-oKE"/>
-                                    <action selector="dismisstapped:" destination="9Zb-Ld-ftI" eventType="touchUpInside" id="NiG-rc-kP7"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqT-5x-G3e">
                                 <rect key="frame" x="340" y="684.5" width="30" height="29"/>
@@ -360,10 +352,6 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" backgroundImage="folder.circle" catalog="system"/>
-                                <connections>
-                                    <action selector="crossTapped:" destination="mPu-aV-lKG" eventType="touchUpInside" id="eee-C0-JlF"/>
-                                    <action selector="dismisstapped:" destination="9Zb-Ld-ftI" eventType="touchUpInside" id="WLU-OS-VOc"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjq-6T-SOU">
                                 <rect key="frame" x="340" y="647" width="30" height="28"/>
@@ -373,10 +361,6 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" backgroundImage="book" catalog="system"/>
-                                <connections>
-                                    <action selector="crossTapped:" destination="mPu-aV-lKG" eventType="touchUpInside" id="0rT-mp-tII"/>
-                                    <action selector="dismisstapped:" destination="9Zb-Ld-ftI" eventType="touchUpInside" id="TsE-dI-kqK"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fne-z8-p53">
                                 <rect key="frame" x="340" y="610.5" width="30" height="25.5"/>
@@ -386,10 +370,6 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" backgroundImage="pencil.slash" catalog="system"/>
-                                <connections>
-                                    <action selector="crossTapped:" destination="mPu-aV-lKG" eventType="touchUpInside" id="AQj-hh-7Ct"/>
-                                    <action selector="dismisstapped:" destination="9Zb-Ld-ftI" eventType="touchUpInside" id="IJZ-cb-eEx"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AWl-a8-M7f"/>
@@ -428,6 +408,16 @@
                         <outlet property="menuBtn4BottomContraint" destination="VmC-lK-UOK" id="Kzf-W8-2bP"/>
                         <outlet property="menuBtn5" destination="iJU-Fu-AkI" id="OKx-ME-fm3"/>
                         <outlet property="menuBtn5BottomContraint" destination="VcD-9Y-O8P" id="RtX-AO-wrU"/>
+                        <outlet property="sideMenuBtn1" destination="8Bb-ew-3Fb" id="BCG-oN-Vrl"/>
+                        <outlet property="sideMenuBtn1BottomContraint" destination="eqx-bc-Pxe" id="dT4-Te-Po9"/>
+                        <outlet property="sideMenuBtn2" destination="D2y-AX-22H" id="6Wn-rq-zRS"/>
+                        <outlet property="sideMenuBtn2BottomContraint" destination="sJt-uf-ylA" id="u4o-Ji-aER"/>
+                        <outlet property="sideMenuBtn3" destination="cqT-5x-G3e" id="tEQ-YN-c0N"/>
+                        <outlet property="sideMenuBtn3BottomContraint" destination="38z-lc-CLO" id="Ttu-jF-VPW"/>
+                        <outlet property="sideMenuBtn4" destination="cjq-6T-SOU" id="DYa-cH-c1J"/>
+                        <outlet property="sideMenuBtn4BottomContraint" destination="zub-FS-eNt" id="k4c-s4-Su1"/>
+                        <outlet property="sideMenuBtn5" destination="fne-z8-p53" id="jqp-Eh-hBZ"/>
+                        <outlet property="sideMenuBtn5BottomContraint" destination="Dih-gX-gsT" id="U0x-K4-ZiD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBm-hk-hOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
