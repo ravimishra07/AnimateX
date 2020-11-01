@@ -28,7 +28,6 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimateX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -127,6 +126,7 @@
                         <outlet property="transtionBtn" destination="gTc-hV-KBL" id="Wbo-nr-UdI"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="76"/>
         </scene>
@@ -543,12 +543,14 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8G-Ag-sRf">
                                 <rect key="frame" x="352" y="824" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="8kW-r8-z59"/>
                                     <constraint firstAttribute="height" constant="50" id="Nyn-Hb-096"/>
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="menu"/>
+                                <inset key="imageEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                <state key="normal" image="add"/>
                                 <connections>
                                     <action selector="menuTapped:" destination="2zW-sx-rcA" eventType="touchUpInside" id="dVd-wv-198"/>
                                 </connections>
@@ -588,6 +590,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="512" height="512"/>
         <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
         <image name="bolt.horizontal.circle" catalog="system" width="128" height="121"/>
         <image name="book" catalog="system" width="128" height="102"/>
@@ -600,7 +603,6 @@
         <image name="folder.circle" catalog="system" width="128" height="121"/>
         <image name="heart" width="512" height="512"/>
         <image name="highlighter" catalog="system" width="128" height="119"/>
-        <image name="menu" width="512" height="512"/>
         <image name="paperplane.circle" catalog="system" width="128" height="121"/>
         <image name="pencil.slash" catalog="system" width="128" height="113"/>
         <image name="phone-call" width="512" height="512"/>
