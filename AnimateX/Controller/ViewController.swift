@@ -29,17 +29,28 @@ class ViewController: UIViewController {
     @IBAction func loadersTapped(_ sender: UIButton){
         let vc = self.storyboard?.instantiateViewController(identifier: "LoaderVC") as! LoaderVC
         //vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: true, completion: nil)
+        //self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func transitionTapped(_ sender: UIButton){
         let vc = self.storyboard?.instantiateViewController(identifier: "TransitionViewController") as! TransitionViewController
         //vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: false, completion: nil)
+//        self.present(vc, animated: false, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
 
     @IBAction func navigationTapped(_ sender: UIButton){
         let vc = self.storyboard?.instantiateViewController(identifier: "NavigationViewController") as! NavigationViewController
-        self.present(vc, animated: false, completion: nil)
+//        self.present(vc, animated: false, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+
+    }
+    @IBAction func menuBtnTapped(_ sender: UIButton){
+        let vc = self.storyboard?.instantiateViewController(identifier: "MenuViewController") as! MenuViewController
+//        self.present(vc, animated: false, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
 }
 

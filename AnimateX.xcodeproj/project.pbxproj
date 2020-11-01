@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3C6310932536A483005B712D /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6310922536A483005B712D /* TransitionViewController.swift */; };
 		3C6310962536A59F005B712D /* TranstionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6310952536A59F005B712D /* TranstionCell.swift */; };
+		3C6B0FAE254F1DEE00AE26FA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B0FAD254F1DEE00AE26FA /* MenuViewController.swift */; };
+		3C6B0FB1254F227100AE26FA /* UtilityFunc+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B0FB0254F227100AE26FA /* UtilityFunc+extensions.swift */; };
 		3C99A6F8254590740018160F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C99A6F7254590740018160F /* NavigationViewController.swift */; };
 		3CCA2700252D76B100853FA2 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA26FF252D76B100853FA2 /* MenuCell.swift */; };
 		3CF2EA9B252CE50A00A853CC /* LoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2EA9A252CE50A00A853CC /* LoaderVC.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		3C6310922536A483005B712D /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 		3C6310952536A59F005B712D /* TranstionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranstionCell.swift; sourceTree = "<group>"; };
+		3C6B0FAD254F1DEE00AE26FA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3C6B0FB0254F227100AE26FA /* UtilityFunc+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UtilityFunc+extensions.swift"; sourceTree = "<group>"; };
 		3C99A6F7254590740018160F /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		3CCA26FF252D76B100853FA2 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		3CF2EA9A252CE50A00A853CC /* LoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderVC.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 				3C6310922536A483005B712D /* TransitionViewController.swift */,
 				3CF2EA9A252CE50A00A853CC /* LoaderVC.swift */,
 				3C99A6F7254590740018160F /* NavigationViewController.swift */,
+				3C6B0FAD254F1DEE00AE26FA /* MenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -79,6 +84,7 @@
 		3C99A6EF254581AA0018160F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3C6B0FB0254F227100AE26FA /* UtilityFunc+extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -204,9 +210,11 @@
 				3C6310962536A59F005B712D /* TranstionCell.swift in Sources */,
 				3CFF34AA252C189600C5B086 /* ViewController.swift in Sources */,
 				3CFF34A6252C189600C5B086 /* AppDelegate.swift in Sources */,
+				3C6B0FAE254F1DEE00AE26FA /* MenuViewController.swift in Sources */,
 				3CCA2700252D76B100853FA2 /* MenuCell.swift in Sources */,
 				3CF2EA9B252CE50A00A853CC /* LoaderVC.swift in Sources */,
 				3C6310932536A483005B712D /* TransitionViewController.swift in Sources */,
+				3C6B0FB1254F227100AE26FA /* UtilityFunc+extensions.swift in Sources */,
 				3CFF34A8252C189600C5B086 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

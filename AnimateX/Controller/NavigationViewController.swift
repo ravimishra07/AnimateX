@@ -168,14 +168,13 @@ class NavigationViewController: UIViewController {
     @IBAction func crossTapped(_ sender: UIButton){
         if isMenuShown{
             self.initaliseViews()
-           // hideSideMenu(isHidden: false)
-
+            sideMenuInitialState2()
+            isBottomShown = false
             UIView.animate(withDuration: 0.3) {
                 self.menuBtn3.transform = CGAffineTransform(rotationAngle: (.pi/4))
             }
         }else{
             self.animateView()
-           // hideSideMenu(isHidden: true)
             UIView.animate(withDuration: 0.3) {
                 self.menuBtn3.transform = .identity
             }
