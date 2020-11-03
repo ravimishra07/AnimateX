@@ -17,12 +17,11 @@ The code is modular, code blocks have almost no dependency on each other. This w
 
 <h3>2. bottom menu</h3>
 
-![Menu](demo/animateX-gif_4.gif)
+![Menu](demo/animatex-gif_4.gif)
 
 <h3>3. Side Menu</h3>
 
 ![Menu](demo/animateX-gif_3.gif)
-<b>Built with</b>
 
 <h3>4. loader-a</h3>
 
@@ -32,15 +31,15 @@ The code is modular, code blocks have almost no dependency on each other. This w
 
 ![Menu](demo/animateX-gif_2.gif)
 
-Include logo/demo screenshot etc.
-
 ## Tech/framework used
-Swift 5 and storyboard
+<li>Swift</li>
+<li>Storybosrd</li>
 
 ## Contribute
-It we great to have opensource enthusiast help to improve and add more to this project. Clone the project add you code and make a pull request. The main thing to keep in mind is to make code as modular  as possible. Animations should without many dependencies. Lastly do not any pod or library
+It would be great to have opensource enthusiast help us improve and add more to this project. Clone the project add you code and make a pull request. The main thing to keep in mind is to make code as modular as possible. Lastly do not add any pod or library
 
 ## License
-MIT License
+
+![Licence](https://img.shields.io/apm/l/vim-mode)
 
 Copyright (c) 2020 Ravi Mishra
