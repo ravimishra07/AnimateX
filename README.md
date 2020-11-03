@@ -39,10 +39,8 @@ Swift 5 and storyboard
 
 ## Contribute
 It we great to have opensource enthusiast help to improve and add more to this project. Clone the project add you code and make a pull request. The main thing to keep in mind is to make code as modular  as possible. Animations should without many dependencies. Lastly do not any pod or library
-## Credits
-This project is inspired by this repository by Shubham Singh(https://github.com/Shubham0812/Animatify-ios)
 
 ## License
-A short snippet describing the license (MIT, Apache etc)
+MIT License
 
-MIT © [Yourname]()
+Copyright (c) 2020 Ravi Mishra
