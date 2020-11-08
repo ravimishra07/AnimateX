@@ -3,9 +3,9 @@ Collection of beautiful animations that could be used to make project look great
 ## Motivation
 The idea behind AnimateX is to provide a one stop for all frequent animation needs, be it loaders, menus or transitions. It is open source and animations and improvements are welcome.
 ## Code style
-The code is modular, code blocks have almost no dependency on each other. This will help developers to cherry pick code they need.
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
- 
+The code is modular, code blocks have almost no dependency on each other. This will help developers to cherry pick code they need.
+
 ## Animations
 <h3>1. Menu</h3>
 
