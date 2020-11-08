@@ -29,7 +29,7 @@ The code is modular, code blocks have almost no dependency on each other. This w
 
 ## Tech/framework used
 <li>Swift</li>
-<li>Storybosrd</li>
+<li>Storyboard</li>
 
 ## Contribute
 It would be great to have opensource enthusiast help us improve and add more to this project. Clone the project add you code and make a pull request. The main thing to keep in mind is to make code as modular as possible. Lastly do not add any pod or library
