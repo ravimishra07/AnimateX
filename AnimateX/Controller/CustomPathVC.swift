@@ -10,7 +10,6 @@ enum CustomShape: String{
     case kLine = "Line"
     case kRectangle = "Rectangle"
     case kFilledRect = "Filled Rectangle"
-
     case kCircle = "Circle"
     case kEllipse = "Ellipse"
     case kSemiCircleTop = "Semi Circle Top"
@@ -21,6 +20,10 @@ enum CustomShape: String{
     case kTopCurve = "Top Curve"
     case kBottomCurve = "Bottom Curve"
 }
+enum ShapeDirection{
+    case kClockWise
+    case kAntiClockWise
+}
 class CustomPathVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let shapeArray: [CustomShape] = [.kLine,.kRectangle,.kFilledRect,.kCircle,.kEllipse,.kSemiCircleTop,.kSemiCircleBottom,.kSemiCircleLeft,.kSemiCircleRight,.kPie,.kTopCurve,.kBottomCurve]
@@ -29,13 +32,14 @@ class CustomPathVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    //MARK: functions to draw shapes
     func drawLine(cellView: UIView){
         CATransaction.begin()
         
         // set initial and final points
         let startPoint =  CGPoint(x: 0, y: cellView.bounds.height/2)
         let endoint = CGPoint(x: cellView.frame.width,y: cellView.frame.height/2)
-       // cellView.backgroundColor = .green
 
         // design path of line
         let path = UIBezierPath()
@@ -80,6 +84,7 @@ class CustomPathVC: UIViewController {
         view.layer.addSublayer(shape)
         
     }
+ 
     func drawFilledRect(view: UIView){
         let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 12, height: 0))
         let shape = CAShapeLayer()
@@ -90,14 +95,72 @@ class CustomPathVC: UIViewController {
     }
     
     func drawCircle(view: UIView){
-        let path = UIBezierPath(arcCenter: view.center, radius: CGFloat(50), startAngle: CGFloat(0), endAngle: .pi*2, clockwise: true)
+        let cellCenter = CGPoint(x: view.bounds.height/2+55, y: view.bounds.height/2)
+        let path = UIBezierPath(arcCenter: cellCenter, radius: CGFloat(50), startAngle: CGFloat(0), endAngle: .pi*2, clockwise: true)
         let shape = CAShapeLayer()
         shape.path = path.cgPath
         shape.strokeColor = UIColor.red.cgColor
+        shape.fillColor = UIColor.clear.cgColor
+        shape.lineWidth = 12
         shape.name = CustomShape.kCircle.rawValue
         view.layer.addSublayer(shape)
     }
     
+    func drawEclipse(view: UIView){
+        let path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height-20))
+        let shape = CAShapeLayer()
+        shape.path = path.cgPath
+        shape.lineWidth = 12
+        shape.fillColor = UIColor.clear.cgColor
+        shape.strokeColor = UIColor.red.cgColor
+        shape.name = CustomShape.kEllipse.rawValue
+        view.layer.addSublayer(shape)
+    }
+    
+    func  drawCircularArc(view: UIView, startAngle: CGFloat, endAngle: CGFloat, isClockwise: Bool? = true, radius: CGFloat = 50){
+        let cellCenter = CGPoint(x: view.bounds.height/2+55, y: view.bounds.height/2)
+        let path = UIBezierPath(arcCenter: cellCenter, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: isClockwise!)
+        let shape = CAShapeLayer()
+        shape.path = path.cgPath
+        shape.strokeColor = UIColor.red.cgColor
+        shape.fillColor = UIColor.clear.cgColor
+        shape.lineWidth = 12
+        shape.name = CustomShape.kCircle.rawValue
+        view.layer.addSublayer(shape)
+    }
+    /*
+    func drawArc(view: UIView){
+        
+        let endPoint = CGPoint(x: view.bounds.width-20, y: 60)
+        let curvePoint1 = CGPoint(x: 60, y: 10)
+        let curvePoint2 = CGPoint(x: view.bounds.width-80, y: 10)
+
+        let path = UIBezierPath()
+        
+        path.move(to: CGPoint(x: 20, y: 60))
+        path.addCurve(to: endPoint, controlPoint1: curvePoint1, controlPoint2: curvePoint2)
+        let shape = CAShapeLayer()
+        shape.path = path.cgPath
+        shape.strokeColor = UIColor.red.cgColor
+        shape.fillColor = UIColor.clear.cgColor
+        shape.lineWidth = 12
+        shape.name = CustomShape.kCircle.rawValue
+        view.layer.addSublayer(shape)
+    }
+    */
+    func drawArc(view: UIView, startPoint: CGPoint, curvePoint1: CGPoint, curvePoint2: CGPoint, endPoint: CGPoint){
+        let path = UIBezierPath()
+         path.move(to: startPoint)
+         path.addCurve(to: endPoint, controlPoint1: curvePoint1, controlPoint2: curvePoint2)
+     
+        let shape = CAShapeLayer()
+        shape.path =  path.cgPath
+        shape.strokeColor = UIColor.red.cgColor
+        shape.fillColor = UIColor.clear.cgColor
+        shape.lineWidth = 4
+        shape.name = CustomShape.kCircle.rawValue
+        view.layer.addSublayer(shape)
+    }
     func removeAnimation(view: UIView) {
        for layer in view.layer.sublayers ?? [CALayer](){
              layer.removeFromSuperlayer()
@@ -124,6 +187,35 @@ extension CustomPathVC: UITableViewDelegate,UITableViewDataSource{
             drawSquare(view: cell.mainView)
         }else if shapeType == .kFilledRect{
             drawFilledRect(view: cell.mainView)
+        }else if shapeType == .kCircle{
+            drawCircle(view: cell.mainView)
+        }else if shapeType == .kEllipse{
+            drawEclipse(view: cell.mainView)
+        }else if shapeType == .kSemiCircleTop{
+             drawCircularArc(view: cell.mainView, startAngle: CGFloat(0), endAngle: .pi,isClockwise: false)
+        }else if shapeType == .kSemiCircleBottom{
+             drawCircularArc(view: cell.mainView, startAngle: CGFloat(0), endAngle: .pi,isClockwise: true)
+        }else if shapeType == .kSemiCircleLeft{
+             drawCircularArc(view: cell.mainView, startAngle: -.pi/2, endAngle: .pi/2,isClockwise: false)
+
+        }else if shapeType == .kSemiCircleRight{
+             drawCircularArc(view: cell.mainView, startAngle: -.pi/2, endAngle: .pi/2,isClockwise: true)
+        }else if shapeType == .kPie{
+             drawCircularArc(view: cell.mainView, startAngle: -(.pi)/6, endAngle: -2*(.pi)/3,isClockwise: false)
+        }else if shapeType ==  .kTopCurve{
+            let startPoint = CGPoint(x: 20, y: 60)
+            let endPoint = CGPoint(x: cell.mainView.bounds.width-20, y: 60)
+            let curvePoint1 = CGPoint(x: 60, y: 10)
+            let curvePoint2 = CGPoint(x: cell.mainView.bounds.width-80, y: 10)
+            
+           drawArc(view: cell.mainView, startPoint: startPoint, curvePoint1:curvePoint1, curvePoint2: curvePoint2, endPoint: endPoint)
+        }else if shapeType == .kBottomCurve{
+            let startPoint = CGPoint(x: 20, y: 60)
+            let endPoint = CGPoint(x: cell.mainView.bounds.width-20, y: 60)
+            let curvePoint1 = CGPoint(x: 60, y: 120)
+            let curvePoint2 = CGPoint(x: cell.mainView.bounds.width-80, y: 120)
+            
+           drawArc(view: cell.mainView, startPoint: startPoint, curvePoint1:curvePoint1, curvePoint2: curvePoint2, endPoint: endPoint)
         }
         
         return cell
