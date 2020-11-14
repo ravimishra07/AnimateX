@@ -35,27 +35,47 @@ class CustomPathVC: UIViewController {
     
     //MARK: functions to draw shapes
     func drawLine(cellView: UIView){
-        CATransaction.begin()
-        
-        // set initial and final points
-        let startPoint =  CGPoint(x: 0, y: cellView.bounds.height/2)
+        // initial values
+        let timeInterval: CFTimeInterval = 1
+        let initStartPoint =  CGPoint(x: 0, y: cellView.bounds.height/2)
+        let initEndPoint =  CGPoint(x: 10, y: cellView.bounds.height/2)
         let endoint = CGPoint(x: cellView.frame.width,y: cellView.frame.height/2)
 
+        // adding animation
+        let animation = CABasicAnimation(keyPath: "path")
+        let finalPath = UIBezierPath()
+        
+        finalPath.move(to: initEndPoint)
+        finalPath.addLine(to: endoint)
+        animation.toValue = finalPath.cgPath
+        animation.isRemovedOnCompletion = false
+        animation.duration = timeInterval
+        animation.repeatCount=Float.infinity
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut) // animation curve is Ease Out
+        animation.fillMode = CAMediaTimingFillMode.both
+        animation.isRemovedOnCompletion = false
+        
         // design path of line
-        let path = UIBezierPath()
-        path.move(to: startPoint)
-        path.addLine(to: endoint)
+        let initPath = UIBezierPath()
+        initPath.move(to: initStartPoint)
+        initPath.addLine(to: initEndPoint)
 
         // add shape
         let shape = CAShapeLayer()
-        shape.path = path.cgPath
+        shape.path = initPath.cgPath
         shape.strokeColor  = UIColor.red.cgColor
-        shape.lineWidth = 2
+        shape.lineWidth = 10
         shape.name = CustomShape.kLine.rawValue
+        shape.add(animation, forKey: animation.keyPath)
         cellView.layer.addSublayer(shape)
         
     }
     func drawSquare(view: UIView){
+        let timeInterval: CFTimeInterval = 1
+        let initPath = UIBezierPath()
+        initPath.move(to: CGPoint(x: 0, y: 0))
+        initPath.addLine(to: CGPoint(x: 0, y: 0))
+       
         let path = UIBezierPath()
         // initial line
         path.move(to: CGPoint(x: 0, y: 0))
@@ -72,15 +92,29 @@ class CustomPathVC: UIViewController {
         //closes the shape by drawing last line
         path.close()
         
+        
+        // adding animation
+        let animation = CABasicAnimation(keyPath: "path")
+        animation.toValue = path.cgPath
+        animation.isRemovedOnCompletion = false
+        animation.duration = timeInterval
+        animation.repeatCount=Float.infinity
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut) // animation curve is Ease Out
+        animation.fillMode = CAMediaTimingFillMode.both
+        animation.isRemovedOnCompletion = false
+
+        
         // add shape
         let shape = CAShapeLayer()
-        shape.path = path.cgPath
+        shape.path = initPath.cgPath
         shape.strokeColor  = UIColor.red.cgColor
         shape.fillColor = UIColor.clear.cgColor
         //shape.strokeColor
         
         shape.lineWidth = 6
         shape.name = CustomShape.kRectangle.rawValue
+        shape.add(animation, forKey: animation.keyPath)
+
         view.layer.addSublayer(shape)
         
     }
