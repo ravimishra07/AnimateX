@@ -47,6 +47,7 @@ class CustomPathVC: UIViewController {
         shape.path = path.cgPath
         shape.strokeColor  = UIColor.red.cgColor
         shape.lineWidth = 2
+        shape.name = CustomShape.kLine.rawValue
         cellView.layer.addSublayer(shape)
         
     }
@@ -75,6 +76,7 @@ class CustomPathVC: UIViewController {
         //shape.strokeColor
         
         shape.lineWidth = 6
+        shape.name = CustomShape.kRectangle.rawValue
         view.layer.addSublayer(shape)
         
     }
@@ -83,11 +85,24 @@ class CustomPathVC: UIViewController {
         let shape = CAShapeLayer()
         shape.path = path.cgPath
         shape.fillColor = UIColor.red.cgColor
-        
+        shape.name = CustomShape.kFilledRect.rawValue
         view.layer.addSublayer(shape)
-   
-        
     }
+    
+    func drawCircle(view: UIView){
+        let path = UIBezierPath(arcCenter: view.center, radius: CGFloat(50), startAngle: CGFloat(0), endAngle: .pi*2, clockwise: true)
+        let shape = CAShapeLayer()
+        shape.path = path.cgPath
+        shape.strokeColor = UIColor.red.cgColor
+        shape.name = CustomShape.kCircle.rawValue
+        view.layer.addSublayer(shape)
+    }
+    
+    func removeAnimation(view: UIView) {
+       for layer in view.layer.sublayers ?? [CALayer](){
+             layer.removeFromSuperlayer()
+         }
+     }
 }
 extension CustomPathVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -99,6 +114,7 @@ extension CustomPathVC: UITableViewDelegate,UITableViewDataSource{
             return UITableViewCell()
         }
         cell.mainView.backgroundColor = .clear
+        removeAnimation(view: cell.mainView)
         cell.shapeLabel.text = shapeArray[indexPath.row].rawValue
         let shapeType = shapeArray[indexPath.row]
         if shapeType == .kLine{
