@@ -13,6 +13,7 @@
 		3C6B0FB1254F227100AE26FA /* UtilityFunc+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B0FB0254F227100AE26FA /* UtilityFunc+extensions.swift */; };
 		3C99A6F8254590740018160F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C99A6F7254590740018160F /* NavigationViewController.swift */; };
 		3CCA2700252D76B100853FA2 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA26FF252D76B100853FA2 /* MenuCell.swift */; };
+		3CD7EA1F255F9E650003D034 /* AnimationCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7EA1E255F9E650003D034 /* AnimationCVCell.swift */; };
 		3CF2EA9B252CE50A00A853CC /* LoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2EA9A252CE50A00A853CC /* LoaderVC.swift */; };
 		3CFF34A6252C189600C5B086 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFF34A5252C189600C5B086 /* AppDelegate.swift */; };
 		3CFF34A8252C189600C5B086 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFF34A7252C189600C5B086 /* SceneDelegate.swift */; };
@@ -29,6 +30,7 @@
 		3C6B0FB0254F227100AE26FA /* UtilityFunc+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UtilityFunc+extensions.swift"; sourceTree = "<group>"; };
 		3C99A6F7254590740018160F /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		3CCA26FF252D76B100853FA2 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		3CD7EA1E255F9E650003D034 /* AnimationCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCVCell.swift; sourceTree = "<group>"; };
 		3CF2EA9A252CE50A00A853CC /* LoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderVC.swift; sourceTree = "<group>"; };
 		3CFF34A2252C189600C5B086 /* AnimateX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimateX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CFF34A5252C189600C5B086 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				3CCA26FF252D76B100853FA2 /* MenuCell.swift */,
 				3C6310952536A59F005B712D /* TranstionCell.swift */,
+				3CD7EA1E255F9E650003D034 /* AnimationCVCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -103,6 +106,13 @@
 			children = (
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		3CD7EA21255F9EC30003D034 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3CFF3499252C189600C5B086 = {
@@ -124,6 +134,7 @@
 		3CFF34A4252C189600C5B086 /* AnimateX */ = {
 			isa = PBXGroup;
 			children = (
+				3CD7EA21255F9EC30003D034 /* Views */,
 				3C99A6EC2545818D0018160F /* Core */,
 				3C99A6EF254581AA0018160F /* Utils */,
 				3C99A6F1254581E40018160F /* Animations */,
@@ -212,6 +223,7 @@
 				3CFF34A6252C189600C5B086 /* AppDelegate.swift in Sources */,
 				3C6B0FAE254F1DEE00AE26FA /* MenuViewController.swift in Sources */,
 				3CCA2700252D76B100853FA2 /* MenuCell.swift in Sources */,
+				3CD7EA1F255F9E650003D034 /* AnimationCVCell.swift in Sources */,
 				3CF2EA9B252CE50A00A853CC /* LoaderVC.swift in Sources */,
 				3C6310932536A483005B712D /* TransitionViewController.swift in Sources */,
 				3C6B0FB1254F227100AE26FA /* UtilityFunc+extensions.swift in Sources */,

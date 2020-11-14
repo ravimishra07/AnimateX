@@ -8,10 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var animationCV: UICollectionView!
     @IBOutlet weak var loaderBtn: UIButton!
     @IBOutlet weak var transtionBtn: UIButton!
     @IBOutlet weak var btn3: UIButton!
     @IBOutlet weak var btn4: UIButton!
+    let animationData = ["Anima"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,3 +57,15 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    
+    
+}
