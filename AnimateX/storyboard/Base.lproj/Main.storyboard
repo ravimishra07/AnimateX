@@ -672,16 +672,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRK-oN-iZJ">
-                                                    <rect key="frame" x="77" y="11" width="260" height="200"/>
+                                                    <rect key="frame" x="77" y="36" width="260" height="150"/>
                                                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="200" id="8b8-DQ-0xj"/>
+                                                        <constraint firstAttribute="height" constant="150" id="8b8-DQ-0xj"/>
                                                         <constraint firstAttribute="width" constant="260" id="ZAE-Ka-V32"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtW-cp-saf">
-                                                    <rect key="frame" x="186" y="190" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="184.5" y="191" width="45.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
