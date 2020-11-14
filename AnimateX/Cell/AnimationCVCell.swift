@@ -9,8 +9,16 @@ import UIKit
 
 class AnimationCVCell: UICollectionViewCell {
     @IBOutlet weak var mainLabel: UILabel!
-    override class func awakeFromNib() {
-        
+    @IBOutlet weak var mainView: UIView!
+
+    
+    override class func description() -> String {
+        "AnimationCVCell"
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        mainView.layer.cornerRadius = 6
+        // Initialization code
+    }
 }
