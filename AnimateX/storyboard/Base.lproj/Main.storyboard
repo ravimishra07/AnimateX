@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aYF-Cn-fte">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="23G-ea-tc9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -652,13 +652,79 @@
             </objects>
             <point key="canvasLocation" x="2908.6956521739135" y="75.669642857142847"/>
         </scene>
+        <!--Custom PathVC-->
+        <scene sceneID="0yj-ck-8nR">
+            <objects>
+                <viewController storyboardIdentifier="CustomPathVC" id="23G-ea-tc9" customClass="CustomPathVC" customModule="AnimateX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dgT-Fc-gC9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DiS-Yf-L3Q">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomShapeCell" rowHeight="222" id="Tcy-ZV-8k9" customClass="CustomShapeCell" customModule="AnimateX" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="222"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tcy-ZV-8k9" id="Hv3-Qe-XzX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRK-oN-iZJ">
+                                                    <rect key="frame" x="77" y="11" width="260" height="200"/>
+                                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="8b8-DQ-0xj"/>
+                                                        <constraint firstAttribute="width" constant="260" id="ZAE-Ka-V32"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtW-cp-saf">
+                                                    <rect key="frame" x="186" y="190" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="YtW-cp-saf" secondAttribute="bottom" id="9sP-he-7fe"/>
+                                                <constraint firstItem="SRK-oN-iZJ" firstAttribute="centerX" secondItem="Hv3-Qe-XzX" secondAttribute="centerX" id="SVN-z4-9cc"/>
+                                                <constraint firstItem="YtW-cp-saf" firstAttribute="centerX" secondItem="Hv3-Qe-XzX" secondAttribute="centerX" id="dgc-ov-1fD"/>
+                                                <constraint firstItem="SRK-oN-iZJ" firstAttribute="centerY" secondItem="Hv3-Qe-XzX" secondAttribute="centerY" id="jt5-uA-nrd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mainView" destination="SRK-oN-iZJ" id="2lO-DZ-8OM"/>
+                                            <outlet property="shapeLabel" destination="YtW-cp-saf" id="SIj-Nx-qnZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YGg-wh-dOs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DiS-Yf-L3Q" firstAttribute="leading" secondItem="YGg-wh-dOs" secondAttribute="leading" id="1dp-BC-7BZ"/>
+                            <constraint firstItem="YGg-wh-dOs" firstAttribute="bottom" secondItem="DiS-Yf-L3Q" secondAttribute="bottom" id="8jb-u6-UDL"/>
+                            <constraint firstItem="DiS-Yf-L3Q" firstAttribute="top" secondItem="YGg-wh-dOs" secondAttribute="top" id="FSv-yG-r5D"/>
+                            <constraint firstItem="YGg-wh-dOs" firstAttribute="trailing" secondItem="DiS-Yf-L3Q" secondAttribute="trailing" id="ffh-Tb-iVs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="DiS-Yf-L3Q" id="4WR-Tr-C67"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9UX-Js-Fpz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3724.6376811594205" y="71.651785714285708"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add" width="512" height="512"/>
         <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
         <image name="bolt.horizontal.circle" catalog="system" width="128" height="121"/>
-        <image name="book" width="512" height="512"/>
         <image name="book" catalog="system" width="128" height="102"/>
+        <image name="book" width="512" height="512"/>
         <image name="chat" width="512" height="512"/>
         <image name="chat-1" width="512" height="512"/>
         <image name="cross-mark" width="512" height="512"/>
@@ -678,6 +744,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
